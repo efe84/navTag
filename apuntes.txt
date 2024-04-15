@@ -1,3 +1,4 @@
 Comentarios en todas las entidades
 Datos autogenerados para rellenar la BD con datos falsos (Mas tarde cambiar por archivos cvs con muchas filas)
- @JoinColumn(name = "dispositivo_id", updatable = false) en Location para no permitir modificar el tag al que se asocia una Location y asi mejorar la seguridad
+@JoinColumn(name = "dispositivo_id", updatable = false) en Location para no permitir modificar el tag al que se asocia una Location y asi mejorar la seguridad
+Crear y añadir excepciones a los servicios, tanto en las interfaces como implementaciones
