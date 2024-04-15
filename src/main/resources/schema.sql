@@ -14,28 +14,28 @@ CREATE TABLE User (
 
 CREATE TABLE Tag (
     id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
+    user_id BIGINT,
     name VARCHAR(60),
     description VARCHAR(255),
-    FOREIGN KEY (user_id) REFERENCES user(id)
+    FOREIGN KEY (user_id) REFERENCES User(id)
 );
 
 CREATE TABLE Location (
     id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    tag_id INT,
+    tag_id BIGINT,
     latitude DECIMAL(10, 8),
     longitude DECIMAL(11, 8),
     time TIMESTAMP,
-    FOREIGN KEY (tag_id) REFERENCES tag(id)
+    FOREIGN KEY (tag_id) REFERENCES Tag(id)
 );
 
 CREATE TABLE Command (
     id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    tag_id INT,
+    tag_id BIGINT,
     type VARCHAR(50),
     state VARCHAR(50),
     time TIMESTAMP,
-    FOREIGN KEY (tag_id) REFERENCES tag(id)
+    FOREIGN KEY (tag_id) REFERENCES Tag(id)
 );
 
 INSERT INTO User (username, name, email, password, version) VALUES
