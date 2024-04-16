@@ -98,7 +98,6 @@ public class UserServiceImpl implements UserService{
 	 * @param lastName  the last name
 	 * @param email     the email
 	 * @return the user
-     * @throws es.udc.navTag.model.common.exceptions.InstanceNotFoundException 
 	 * @throws InstanceNotFoundException the instance not found exception
 	 */
     @Override
