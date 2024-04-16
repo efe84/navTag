@@ -15,7 +15,7 @@ public interface UserDao extends JpaRepository<User,Long>{
 	 * @param userName the user name
 	 * @return true, if successful
 	 */
-	boolean existsByUserName(String userName);
+	boolean existsByUsername(String userName);
 
 	/**
 	 * Find by user name.
@@ -23,6 +23,6 @@ public interface UserDao extends JpaRepository<User,Long>{
 	 * @param userName the user name
 	 * @return the optional
 	 */
-	Optional<User> findByUserName(String userName);
+	Optional<User> findByUsername(String userName);
 
 }

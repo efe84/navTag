@@ -23,12 +23,12 @@ public interface UserService {
 	/**
 	 * Login.
 	 *
-	 * @param userName the user name
+	 * @param username the user name
 	 * @param password the password
 	 * @return the user
      * @throws IncorrectLoginException the incorrect login exception
 	 */
-	User login(String userName, String password) throws IncorrectLoginException;
+	User login(String username, String password) throws IncorrectLoginException;
 
 	/**
 	 * Login from id.
@@ -36,9 +36,8 @@ public interface UserService {
 	 * @param id the id
 	 * @return the user
      * @throws InstanceNotFoundException the instance not found exception
-	 * @throws javax.management.InstanceNotFoundException 
 	 */
-	User loginFromId(Long id) throws InstanceNotFoundException, javax.management.InstanceNotFoundException;
+	User loginFromId(Long id) throws InstanceNotFoundException;
 
 	/**
 	 * Update profile.

@@ -29,7 +29,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -51,6 +50,11 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <scope>test</scope>
 		</dependency>
 	</dependencies>
 
@@ -82,7 +86,7 @@
 				</dependencies>
 				<configuration>
 					<driver>com.mysql.cj.jdbc.Driver</driver>
-					<url>jdbc:mysql://localhost:3306/navtagdbTest</url>
+					<url>jdbc:mysql://localhost:3306/navtagdb</url>
 					<username>sa</username>
 					<password>sa</password>
 					<autocommit>true</autocommit>
@@ -96,7 +100,7 @@
 						</goals>
 						<configuration>
 							<srcFiles>
-								<srcFile>src/test/resources/schema.sql</srcFile>
+								<srcFile>src/main/resources/schema.sql</srcFile>
 							</srcFiles>
 						</configuration>
 					</execution>
