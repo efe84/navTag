@@ -1,6 +1,11 @@
 package es.udc.navTag.model.services;
 
+import es.udc.navTag.model.common.exceptions.DuplicateInstanceException;
+import es.udc.navTag.model.common.exceptions.InstanceNotFoundException;
 import es.udc.navTag.model.entities.User;
+import es.udc.navTag.model.services.Exceptions.DuplicatedPasswordException;
+import es.udc.navTag.model.services.Exceptions.IncorrectLoginException;
+import es.udc.navTag.model.services.Exceptions.IncorrectPasswordException;
 
 /**
  * The Interface UserService.
@@ -11,8 +16,9 @@ public interface UserService {
 	 * Sign up.
 	 *
 	 * @param user the user
+     * @throws DuplicateInstanceException the duplicate instance exception
 	 */
-	void signUp(User user);
+	void signUp(User user) throws DuplicateInstanceException;
 
 	/**
 	 * Login.
@@ -20,16 +26,19 @@ public interface UserService {
 	 * @param userName the user name
 	 * @param password the password
 	 * @return the user
+     * @throws IncorrectLoginException the incorrect login exception
 	 */
-	User login(String userName, String password);
+	User login(String userName, String password) throws IncorrectLoginException;
 
 	/**
 	 * Login from id.
 	 *
 	 * @param id the id
 	 * @return the user
+     * @throws InstanceNotFoundException the instance not found exception
+	 * @throws javax.management.InstanceNotFoundException 
 	 */
-	User loginFromId(Long id);
+	User loginFromId(Long id) throws InstanceNotFoundException, javax.management.InstanceNotFoundException;
 
 	/**
 	 * Update profile.
@@ -38,8 +47,9 @@ public interface UserService {
 	 * @param name the name
 	 * @param email the email
 	 * @return the user
+     * @throws InstanceNotFoundException the instance not found exception
 	 */
-	User updateProfile(Long id, String name, String email);
+	User updateProfile(Long id, String name, String email) throws InstanceNotFoundException;
 
 	/**
 	 * Change password.
@@ -47,7 +57,10 @@ public interface UserService {
 	 * @param id the id
 	 * @param oldPassword the old password
 	 * @param newPassword the new password
+     * @throws InstanceNotFoundException  the instance not found exception
+     * @throws IncorrectPasswordException the duplicated password exception
+     * @throws IncorrectPasswordException the incorrect password exception
 	 */
-	void changePassword(Long id, String oldPassword, String newPassword);
+	void changePassword(Long id, String oldPassword, String newPassword) throws InstanceNotFoundException, DuplicatedPasswordException, IncorrectPasswordException;
     
 }
