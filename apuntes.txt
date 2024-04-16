@@ -3,3 +3,4 @@ Datos autogenerados para rellenar la BD con datos falsos (Mas tarde cambiar por 
 @JoinColumn(name = "dispositivo_id", updatable = false) en Location para no permitir modificar el tag al que se asocia una Location y asi mejorar la seguridad
 Revisar y mejorar todas las excepciones y sus mensajes de error
 Uso un codificador de contraseñas igual que el de FD(informarme sobre el para hablar de el en el proyecto)
+Modificar los perfiles del pom para que el plugin de crear las bd al ejecutar trabajen sobre la bd normal o de test.

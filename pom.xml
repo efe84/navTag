@@ -55,11 +55,20 @@
 	</dependencies>
 
 	<build>
+		<!-- =================== TEST RESOURCES ================== -->
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+				<filtering>true</filtering>
+			</testResource>
+		</testResources>
+		<!-- =================== PLUGINS ================== -->
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>sql-maven-plugin</artifactId>
@@ -73,7 +82,7 @@
 				</dependencies>
 				<configuration>
 					<driver>com.mysql.cj.jdbc.Driver</driver>
-					<url>jdbc:mysql://localhost:3306/navtagdb</url>
+					<url>jdbc:mysql://localhost:3306/navtagdbTest</url>
 					<username>sa</username>
 					<password>sa</password>
 					<autocommit>true</autocommit>
@@ -87,7 +96,7 @@
 						</goals>
 						<configuration>
 							<srcFiles>
-								<srcFile>src/main/resources/schema.sql</srcFile>
+								<srcFile>src/test/resources/schema.sql</srcFile>
 							</srcFiles>
 						</configuration>
 					</execution>
