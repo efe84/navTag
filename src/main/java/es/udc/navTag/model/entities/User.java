@@ -15,7 +15,7 @@ public class User {
 	private Long id;
 
     /** The user name. */
-	private String userName;
+	private String username;
 
     /** The name. */
 	private String name;
@@ -37,14 +37,13 @@ public class User {
 
     /**
 	 * Instantiates a new user.
-     * @param userName the user name
+     * @param username the user name
      * @param name the name
      * @param email the email
      * @param password the password
-     * @param version the optimistic locking version
 	 */
-    public User(String userName, String name, String email, String password, int version) {
-        this.userName = userName;
+    public User(String username, String name, String email, String password) {
+        this.username = username;
         this.name = name;
         this.email = email;
         this.password = password;
@@ -76,8 +75,8 @@ public class User {
 	 *
 	 * @return the userName
 	 */
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
     /**
@@ -85,8 +84,8 @@ public class User {
 	 *
 	 * @param username the new username
 	 */
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String userName) {
+        this.username = userName;
     }
 
     /**
@@ -166,7 +165,7 @@ public class User {
 	 */
     @Override
     public String toString() {
-        return "User [id=" + id + ", userName=" + userName + ", name=" + name + ", email=" + email + ", password="
+        return "User [id=" + id + ", userName=" + username + ", name=" + name + ", email=" + email + ", password="
                 + password + ", version=" + version + "]";
     }
     
