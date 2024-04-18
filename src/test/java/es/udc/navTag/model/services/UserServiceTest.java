@@ -47,7 +47,6 @@ public class UserServiceTest {
 	 *
 	 * @throws DuplicateInstanceException the duplicate instance exception
 	 * @throws InstanceNotFoundException  the instance not found exception
-	 * @throws javax.management.InstanceNotFoundException 
 	 */
 	@Test
 	public void testSignUpAndLoginFromId()
