@@ -26,7 +26,7 @@ public class Location {
 	private BigDecimal latitude;
 
     /** The longitude. */
-	private String longitude;
+	private BigDecimal longitude;
 
     /** The date and time. */
     private LocalDateTime time;
@@ -44,7 +44,7 @@ public class Location {
      * @param longitude the longitude
      * @param time the date and time
 	 */
-    public Location(Tag tag, BigDecimal latitude, String longitude, LocalDateTime time) {
+    public Location(Tag tag, BigDecimal latitude, BigDecimal longitude, LocalDateTime time) {
         this.tag = tag;
         this.latitude = latitude;
         this.longitude = longitude;
@@ -114,7 +114,7 @@ public class Location {
 	 *
 	 * @return the longitude
 	 */
-    public String getLongitude() {
+    public BigDecimal getLongitude() {
         return longitude;
     }
 
@@ -123,7 +123,7 @@ public class Location {
 	 *
 	 * @param longitude the new longitude
 	 */
-    public void setLongitude(String longitude) {
+    public void setLongitude(BigDecimal longitude) {
         this.longitude = longitude;
     }
 
